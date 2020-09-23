@@ -18,7 +18,6 @@ namespace VersionControl
         {
             InitializeComponent();
             label1.Text = VersionControlResource.LastName; 
-            label2.Text = VersionControlResource.FirstName; 
             button1.Text = VersionControlResource.Add;
             listBox1.DataSource = users;
             listBox1.ValueMember = "ID";
@@ -27,11 +26,8 @@ namespace VersionControl
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var u = new User()
-            {
-                LastName = textBox1.Text,
-                FirstName = textBox2.Text
-            };
+            var u = new User();
+            u.FullName = textBox1.Text;
             users.Add(u);
         }
     }
