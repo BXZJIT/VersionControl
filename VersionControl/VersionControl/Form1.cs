@@ -15,6 +15,9 @@ namespace VersionControl
         public Form1()
         {
             InitializeComponent();
+            label1.Text = VersionControlResource.LastName; 
+            label2.Text = VersionControlResource.FirstName; 
+            button1.Text = VersionControlResource.Add; 
         }
     }
 }
