@@ -123,9 +123,6 @@
   <data name="FirstName" xml:space="preserve">
     <value>Utónév</value>
   </data>
-  <data name="LastName" xml:space="preserve">
-    <value>Vezetéknév</value>
-  </data>
   <data name="Write" xml:space="preserve">
     <value>Fájlba írás</value>
   </data>

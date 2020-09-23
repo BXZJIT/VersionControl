@@ -18,7 +18,6 @@ namespace VersionControl
         public Form1()
         {
             InitializeComponent();
-            label1.Text = VersionControlResource.LastName; 
             button1.Text = VersionControlResource.Add;
             button2.Text = VersionControlResource.Write;
             listBox1.DataSource = users;
@@ -55,6 +54,11 @@ namespace VersionControl
                     sw.WriteLine();
                 }
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            users.Clear();
         }
     }
 }
