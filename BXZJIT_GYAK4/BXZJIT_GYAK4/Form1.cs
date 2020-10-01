@@ -85,16 +85,30 @@ namespace BXZJIT_GYAK4
                 values[counter, 1] = f.Vendor;
                 values[counter, 2] = f.Side;
                 values[counter, 3] = f.District;
-                values[counter, 4] = f.Elevator;
+                if (f.Elevator)
+                {
+                    values[counter, 4] = "van";
+                }
+
+                else
+                {
+                    values[counter, 4] = "nincs";
+                }
+              
                 values[counter, 5] = f.NumberOfRooms;
                 values[counter, 6] = f.FloorArea;
                 values[counter, 7] = f.Price;
 
                 counter++;
             }
+
             xlSheet.get_Range(
              GetCell(2, 1),
              GetCell(1 + values.GetLength(0), values.GetLength(1))).Value2 = values;
+            for (int i = 0; i < values.GetLength(0); i++)
+            {
+                xlSheet.Cells[i + 2, 9] = "=" + GetCell(i + 2, 7) + "/" + GetCell(i + 2, 8);
+            }
 
         }
         private string GetCell(int x, int y)
