@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30503.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BXZJIT_GYAK4", "BXZJIT_GYAK4\BXZJIT_GYAK4.csproj", "{4C2FF998-7E32-42C2-B62E-6B6F53E508F1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4C2FF998-7E32-42C2-B62E-6B6F53E508F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C2FF998-7E32-42C2-B62E-6B6F53E508F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C2FF998-7E32-42C2-B62E-6B6F53E508F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C2FF998-7E32-42C2-B62E-6B6F53E508F1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {18D9F953-226C-4CFD-A285-93D7031C2AE8}
+	EndGlobalSection
+EndGlobal
