@@ -120,10 +120,10 @@ namespace BXZJIT_GYAK4
             headerRange.BorderAround2(Excel.XlLineStyle.xlContinuous, Excel.XlBorderWeight.xlThick);
             Excel.Range tablerange = xlSheet.get_Range(GetCell(1, 1), GetCell(xlSheet.UsedRange.Rows.Count, 9));
             tablerange.BorderAround2(Excel.XlLineStyle.xlContinuous, Excel.XlBorderWeight.xlThick);
-            Excel.Range first_column = xlSheet.get_Range(GetCell(2, 1), GetCell(xlSheet.UsedRange.Rows.Count, 1));
+            Excel.Range first_column = xlSheet.get_Range(GetCell(2, 1), GetCell(xlSheet.UsedRange.Rows.Count-1, 1));
             first_column.Interior.Color = Color.LightYellow;
             first_column.Font.Bold = true;
-            Excel.Range last_column = xlSheet.get_Range(GetCell(2, 9), GetCell(xlSheet.UsedRange.Rows.Count, 9));
+            Excel.Range last_column = xlSheet.get_Range(GetCell(2, 9), GetCell(xlSheet.UsedRange.Rows.Count-1, 9));
             last_column.Interior.Color = Color.LightGreen;
             last_column.NumberFormat = "0.00";
 
