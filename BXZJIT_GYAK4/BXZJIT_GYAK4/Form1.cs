@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Excel = Microsoft.Office.Interop.Excel;
 using System.Reflection;
 using System.IO;
+using System.Security.Cryptography.Xml;
 
 namespace BXZJIT_GYAK4
 {
@@ -61,15 +62,15 @@ namespace BXZJIT_GYAK4
         {
             string[] headers = new string[]
             {
-     "Kód",
-     "Eladó",
-     "Oldal",
-     "Kerület",
-     "Lift",
-     "Szobák száma",
-     "Alapterület (m2)",
-     "Ár (mFt)",
-     "Négyzetméter ár (Ft/m2)"
+                 "Kód",
+                 "Eladó",
+                 "Oldal",
+                 "Kerület",
+                 "Lift",
+                 "Szobák száma",
+                 "Alapterület (m2)",
+                 "Ár (mFt)",
+                 "Négyzetméter ár (Ft/m2)"
             };
 
             for (int i = 0; i < headers.Length; i++)
@@ -109,6 +110,22 @@ namespace BXZJIT_GYAK4
             {
                 xlSheet.Cells[i + 2, 9] = "=" + GetCell(i + 2, 7) + "/" + GetCell(i + 2, 8);
             }
+            Excel.Range headerRange = xlSheet.get_Range(GetCell(1, 1), GetCell(1, headers.Length));
+            headerRange.Font.Bold = true;
+            headerRange.VerticalAlignment = Excel.XlVAlign.xlVAlignCenter;
+            headerRange.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
+            headerRange.EntireColumn.AutoFit();
+            headerRange.RowHeight = 40;
+            headerRange.Interior.Color = Color.LightBlue;
+            headerRange.BorderAround2(Excel.XlLineStyle.xlContinuous, Excel.XlBorderWeight.xlThick);
+            Excel.Range tablerange = xlSheet.get_Range(GetCell(1, 1), GetCell(xlSheet.UsedRange.Rows.Count, 9));
+            tablerange.BorderAround2(Excel.XlLineStyle.xlContinuous, Excel.XlBorderWeight.xlThick);
+            Excel.Range first_column = xlSheet.get_Range(GetCell(2, 1), GetCell(xlSheet.UsedRange.Rows.Count, 1));
+            first_column.Interior.Color = Color.LightYellow;
+            first_column.Font.Bold = true;
+            Excel.Range last_column = xlSheet.get_Range(GetCell(2, 9), GetCell(xlSheet.UsedRange.Rows.Count, 9));
+            last_column.Interior.Color = Color.LightGreen;
+            last_column.NumberFormat = "0.00";
 
         }
         private string GetCell(int x, int y)
