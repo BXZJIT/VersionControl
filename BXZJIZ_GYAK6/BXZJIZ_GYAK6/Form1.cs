@@ -19,9 +19,29 @@ namespace BXZJIZ_GYAK6
         
     {
         BindingList<RateData> Rates = new BindingList<RateData>();
+        BindingList<string> Currencies = new BindingList<string>();
         public Form1()
         {
             InitializeComponent();
+           
+            var mnbService = new MNBArfolyamServiceSoapClient();
+            var request = new GetCurrenciesRequestBody()
+            {
+            };
+            var response = mnbService.GetCurrencies(request);
+            var currencyresult = response.GetCurrenciesResult;
+
+            var xml = new XmlDocument();
+            xml.LoadXml(currencyresult);
+            foreach (XmlElement element in xml.DocumentElement)
+            {
+                foreach (XmlNode item in element)
+                {
+                    var curr = item.InnerText;
+                    Currencies.Add(curr);
+                }
+            }
+            comboBox1.DataSource = Currencies;
             comboBox1.SelectedItem = "EUR";
             RefreshData();
             
@@ -33,6 +53,7 @@ namespace BXZJIZ_GYAK6
             XMLProcess();
             Diagram();
             dataGridView1.DataSource = Rates;
+            
         }
 
         string result;
@@ -64,7 +85,10 @@ namespace BXZJIZ_GYAK6
 
                 
                 var childElement = (XmlElement)element.ChildNodes[0];
+                if (childElement == null)
+                    continue;
                 rate.Currency = childElement.GetAttribute("curr");
+
 
                 
                 var unit = decimal.Parse(childElement.GetAttribute("unit"));
