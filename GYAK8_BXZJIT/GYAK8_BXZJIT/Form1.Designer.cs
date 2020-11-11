@@ -39,9 +39,9 @@
             // 
             // mainPanel
             // 
-            this.mainPanel.Location = new System.Drawing.Point(13, 108);
+            this.mainPanel.Location = new System.Drawing.Point(13, 170);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(775, 239);
+            this.mainPanel.Size = new System.Drawing.Size(775, 205);
             this.mainPanel.TabIndex = 0;
             // 
             // createTimer
@@ -68,7 +68,7 @@
             // 
             // ball
             // 
-            this.ball.Location = new System.Drawing.Point(154, 23);
+            this.ball.Location = new System.Drawing.Point(162, 23);
             this.ball.Name = "ball";
             this.ball.Size = new System.Drawing.Size(75, 23);
             this.ball.TabIndex = 2;
@@ -79,7 +79,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(276, 28);
+            this.label1.Location = new System.Drawing.Point(289, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(85, 17);
             this.label1.TabIndex = 3;
