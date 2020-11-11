@@ -9,7 +9,7 @@ namespace GYAK8_BXZJIT.Entities
 {
     public class BallFactory : IToyFactory
     {
-        public Toy CreateNew()
+        public Abstractions.Toy CreateNew()
         {
             return new Ball();
         }
