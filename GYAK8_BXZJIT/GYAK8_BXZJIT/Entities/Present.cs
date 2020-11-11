@@ -20,8 +20,8 @@ namespace GYAK8_BXZJIT.Entities
         protected override void DrawImage(Graphics g)
         {
             g.FillRectangle(BoxColor, 0, 0, Width, Height);
-            g.FillRectangle(RibbonColor, Width / 5, Height / 5, Height/2 , Width);
-            g.FillRectangle(RibbonColor, Width /5, Height / 5, Height, Width/2);
+            g.FillRectangle(RibbonColor, Width / 5, Height / 5, Height , Width);
+            g.FillRectangle(RibbonColor, Width /5, Height / 5, Height, Width);
         }
     }
 }
