@@ -36,6 +36,9 @@
             this.ball = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.present = new System.Windows.Forms.Button();
+            this.box = new System.Windows.Forms.Button();
+            this.ribbon = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // mainPanel
@@ -96,11 +99,44 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // present
+            // 
+            this.present.Location = new System.Drawing.Point(551, 35);
+            this.present.Name = "present";
+            this.present.Size = new System.Drawing.Size(75, 23);
+            this.present.TabIndex = 5;
+            this.present.Text = "Present";
+            this.present.UseVisualStyleBackColor = true;
+            this.present.Click += new System.EventHandler(this.present_Click);
+            // 
+            // box
+            // 
+            this.box.BackColor = System.Drawing.Color.Red;
+            this.box.Location = new System.Drawing.Point(551, 77);
+            this.box.Name = "box";
+            this.box.Size = new System.Drawing.Size(75, 23);
+            this.box.TabIndex = 6;
+            this.box.UseVisualStyleBackColor = false;
+            this.box.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // ribbon
+            // 
+            this.ribbon.BackColor = System.Drawing.Color.Lime;
+            this.ribbon.Location = new System.Drawing.Point(551, 106);
+            this.ribbon.Name = "ribbon";
+            this.ribbon.Size = new System.Drawing.Size(75, 23);
+            this.ribbon.TabIndex = 7;
+            this.ribbon.UseVisualStyleBackColor = false;
+            this.ribbon.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ribbon);
+            this.Controls.Add(this.box);
+            this.Controls.Add(this.present);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ball);
@@ -122,6 +158,9 @@
         private System.Windows.Forms.Button ball;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button present;
+        private System.Windows.Forms.Button box;
+        private System.Windows.Forms.Button ribbon;
     }
 }
 

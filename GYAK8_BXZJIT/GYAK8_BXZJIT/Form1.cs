@@ -90,5 +90,14 @@ namespace GYAK8_BXZJIT
                 return;
             button.BackColor = colorPicker.Color;
         }
+
+        private void present_Click(object sender, EventArgs e)
+        {
+            Factory = new PresentFactory()
+            {
+                BoxColor = box.BackColor,
+                RibbonColor = ribbon.BackColor
+            };
+        }
     }
 }
